@@ -12,7 +12,7 @@ const TopicCard = ({ topic }) => {
         <div className="card-body">
           <h1 className="card-title text-3xl font-bold">{name}</h1>
           <p>
-            <div className="badge badge-secondary p-3 text-[1rem] font-bold">Tota Quize {total}</div>
+            <div className="badge badge-secondary p-3 text-[1rem] font-bold">Total Questions {total}</div>
           </p>
           <div className="card-actions justify-end">   
             <Link to={`/quize/${id}`} className="btn btn-primary"> Start Now</Link>
