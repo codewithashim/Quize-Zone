@@ -5,6 +5,7 @@ import Topic from "../Topic/Topic";
 import Statistics from "../Statistics/Statistics";
 import Blogs from "../Blogs/Blogs";
 import { createBrowserRouter } from "react-router-dom";
+import Quize from "../Quize/Quize";
 
 const route = createBrowserRouter([
   {
@@ -18,6 +19,16 @@ const route = createBrowserRouter([
           return fetch("https://openapi.programming-hero.com/api/quiz");
         },
         element: <Topic></Topic>,
+      },
+      {
+        path:'/quize/:id',
+        loader: async({params})=>{
+          return(
+            fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+          )
+        },
+        element: <Quize></Quize>
+
       },
       {
         path: "/statistics",

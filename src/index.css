@@ -16,6 +16,10 @@ code {
     monospace;
 }
 
+/* body {
+  background-color: rgba(13, 13, 13, 0.879);
+} */
+
 * {
   margin: 0;
   padding: 0;

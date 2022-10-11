@@ -5,7 +5,7 @@ import HeroBanner from "../../Assets/hero-banner.svg";
 const Hero = () => {
   return (
     <section className="container">
-      <div className="hero min-h-screen bg-base-200 px-10">
+      <div className="hero min-h-screen bg-base-200 md:max-w-fulll px-10">
         <div className="hero-content grid md:grid-cols-2 sm:grid-cols-1 gap-2">
           <div>
             <h1 className="text-3xl font-bold">
