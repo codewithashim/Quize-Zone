@@ -4,12 +4,12 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div className="navBar shadow dark:bg-gray-800">
+    <div className="navBar shadow bg-gray-900">
       <NavLink
         className={({ isActive }) => (isActive ? "active" : undefined)}
         to="/"
       >
-      Home
+        Home
       </NavLink>
       <NavLink to="/topic">Topic</NavLink>
       <NavLink to="/statistics">Statistics</NavLink>
