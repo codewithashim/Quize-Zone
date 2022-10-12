@@ -8,7 +8,7 @@ const Topic = () => {
   const allTopic = quizeTopic.data;
   return (
     <section className="container md:p-10 lg:p-10 sm:p-2">
-      <div className="topiceContianer grid gap-2 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 mx-auto">
+      <div className="topiceContianer mx-auto">
         {allTopic.map((topic) => {
           return <TopicCard topic={topic} key={topic.id}></TopicCard>;
         })}

@@ -29,7 +29,7 @@ const Quize = () => {
       const newAns = [...currectAns, " ", "💢", " ", curretAnswer];
       setCurrectAns(newAns);
       // setCurrectAns([...currectAns, curretAnswer]);
-      toast.info("See The Currect Answer!", {
+      toast.success("See The Currect Answer!", {
         position: "top-center",
         autoClose: 1000,
         hideProgressBar: false,
