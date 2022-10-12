@@ -2,20 +2,45 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import QuestionCart from "../QuestionCart/QuestionCart";
 import Questions from "../Questions/Questions";
+import { ToastContainer, toast } from "react-toastify";
 
 const Quize = () => {
-  const [currectAns , setCurrectAns] = React.useState([]);
+  const [currectAns, setCurrectAns] = React.useState([]);
   const quizes = useLoaderData();
   const allQuize = quizes.data;
   console.log(allQuize);
   const { name, total, logo, questions } = allQuize;
 
-  const hendelCuurentAnswer = (currectAnswer) => {
-    // console.log(currectAnswer);
-    setCurrectAns([...currectAns , currectAnswer])
-
-  }
-
+  const hendelCuurentAnswer = (curretAnswer) => {
+    console.log(curretAnswer);
+    const exist = currectAns.find((ans) => ans === curretAnswer);
+    if (exist) {
+      toast.warn("Already Given This Answer Pless See This In Cart!", {
+        position: "bottom-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } else {
+      const newAns = [...currectAns, " ", "💢", " ", curretAnswer];
+      setCurrectAns(newAns);
+      // setCurrectAns([...currectAns, curretAnswer]);
+      toast.info("See The Currect Answer!", {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
 
   return (
     <section className="quizeSection">
@@ -35,19 +60,22 @@ const Quize = () => {
       <div class="mainQuestionContainer grid grid-flow-row-dense  m-2 p-2 md:grid-cols-3 gap-3 xl:grid-cols-3 sm:grid-cols-1 sm:grid-rows-2 xl:grid-rows-2 md:grid-rows-2 px-5">
         <div class="questionContainer col-span-2">
           <div className="mainQuestion flex flex-col">
-            {
-                questions.map((question, idx) => {
-                    return(
-                        <Questions hendelCuurentAnswer={hendelCuurentAnswer} key={idx} question={question}></Questions>
-                    )
-                })
-            }
+            {questions.map((question, idx) => {
+              return (
+                <Questions
+                  hendelCuurentAnswer={hendelCuurentAnswer}
+                  key={idx}
+                  question={question}
+                ></Questions>
+              );
+            })}
           </div>
         </div>
-        <div className="questionCartCotainer">
+        <div className="questionCartCotainer shadow p-4">
           <QuestionCart currectAns={currectAns}></QuestionCart>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };

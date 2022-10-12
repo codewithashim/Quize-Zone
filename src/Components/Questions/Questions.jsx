@@ -4,13 +4,14 @@ import { Link } from "react-daisyui";
 import QuestionOpctions from "../QuestionOpctions/QuestionOpctions";
 
 const Questions = ({ question, hendelCuurentAnswer }) => {
-  const { question: questionText, options, correctAnswer, id } = question;
+  // const { question: questionText, options, correctAnswer } = question;
+  const { question: questionText, options } = question;
 
   return (
     <section className="questionSingelCart border rounded p-5 shadow-lg bg-base-300 m-2">
       <div className="curretAnswer flex justify-end">
         <Link
-          onClick={() => hendelCuurentAnswer(correctAnswer)}
+          onClick={() => hendelCuurentAnswer(question.correctAnswer)}
           className="cursor-pointer"
         >
           <EyeIcon className="h-6 w-6 text-green-400" />
