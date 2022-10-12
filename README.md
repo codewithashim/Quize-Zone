@@ -2,11 +2,16 @@
 
 # It's A Quize Web Application
 
-# Live Website Link :
+# Live Website Link : https://craze-quize-zone.netlify.app/
 
-# Sorce Code :
+# Sorce Code : 
 
 # Functionality
+
+any one can viste this site user firendly design .
+responsive for all device ,
+any one can select quize topic when select quize topic then redaicet question page . in question page see the question 
+right side have a eye icon if any one click eye icon then he see the right answer
 
 # Recorce
 
@@ -16,29 +21,10 @@
     Example: https://openapi.programming-hero.com/api/quiz/1
 
 # Dependency I Use :
-    React Router Dom 
+
+    React Router Dom
     Hero Icon
     Tostyfi
     Tailwind
-    
-===================================================================================
 
-{/* <div className="card md:w-96 sm:w-60 bg-base-300 shadow-xl">
-<figure className="p-10">
-  <img src={logo} alt="All Topic" />
-</figure>
-<div className="card-body">
-  <h1 className="card-title text-3xl font-bold">{name}</h1>
-  <p>
-    <div className="badge badge-secondary p-3 text-[1rem] font-bold">
-      Total Questions {total}
-    </div>
-  </p>
-  <div className="card-actions justify-end">
-    <Link to={`/quize/${id}`} className="btn btn-primary">
-      {" "}
-      Start Now
-    </Link>
-  </div>
-</div>
-</div> */}
+==============================================================================
