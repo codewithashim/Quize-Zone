@@ -4,8 +4,7 @@ import { Link } from "react-daisyui";
 import QuestionOpctions from "../QuestionOpctions/QuestionOpctions";
 
 const Questions = ({ question, hendelCuurentAnswer }) => {
-  // const { question: questionText, options, correctAnswer } = question;
-  const { question: questionText, options } = question;
+  const { question: questionText, options, correctAnswer } = question;
 
   return (
     <section className="questionSingelCart border rounded p-5 shadow-lg bg-base-300 m-2">
@@ -23,7 +22,11 @@ const Questions = ({ question, hendelCuurentAnswer }) => {
       <div className="questionOpctions">
         {options.map((opction, idx) => {
           return (
-            <QuestionOpctions key={idx} opction={opction}></QuestionOpctions>
+            <QuestionOpctions
+              key={idx}
+              correctAnswer={correctAnswer}
+              opction={opction}
+            ></QuestionOpctions>
           );
         })}
       </div>
