@@ -3,7 +3,7 @@ import React from "react";
 const Blogs = () => {
   return (
     <section className="p-5">
-      <h2 className="text-2xl p-3 font-bold text-orange-500">
+      <h2 className="text-2xl p-3 mb-5 text-center font-bold text-orange-500">
         Few Question And Answer
       </h2>
 

@@ -7,7 +7,7 @@ const Header = () => {
     <div className="navBar shadow bg-gray-900">
       <NavLink
         className={({ isActive }) => (isActive ? "active" : undefined)}
-        to="/"
+        to="/home"
       >
         Home
       </NavLink>
