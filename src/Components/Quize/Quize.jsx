@@ -1,12 +1,21 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import QuestionCart from "../QuestionCart/QuestionCart";
 import Questions from "../Questions/Questions";
 
 const Quize = () => {
+  const [currectAns , setCurrectAns] = React.useState([]);
   const quizes = useLoaderData();
   const allQuize = quizes.data;
   console.log(allQuize);
   const { name, total, logo, questions } = allQuize;
+
+  const hendelCuurentAnswer = (currectAnswer) => {
+    // console.log(currectAnswer);
+    setCurrectAns([...currectAns , currectAnswer])
+
+  }
+
 
   return (
     <section className="quizeSection">
@@ -29,14 +38,14 @@ const Quize = () => {
             {
                 questions.map((question, idx) => {
                     return(
-                        <Questions key={idx} question={question}></Questions>
+                        <Questions hendelCuurentAnswer={hendelCuurentAnswer} key={idx} question={question}></Questions>
                     )
                 })
             }
           </div>
         </div>
         <div className="questionCartCotainer">
-          <h1>hello crt</h1>
+          <QuestionCart currectAns={currectAns}></QuestionCart>
         </div>
       </div>
     </section>
