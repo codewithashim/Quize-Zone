@@ -8,7 +8,6 @@ const Quize = () => {
   const [currectAns, setCurrectAns] = React.useState([]);
   const quizes = useLoaderData();
   const allQuize = quizes.data;
-  console.log(allQuize);
   const { name, total, logo, questions } = allQuize;
 
   const hendelCuurentAnswer = (curretAnswer) => {
@@ -41,6 +40,8 @@ const Quize = () => {
       });
     }
   };
+
+  
 
   return (
     <section className="quizeSection">

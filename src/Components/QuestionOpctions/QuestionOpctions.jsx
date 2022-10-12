@@ -6,6 +6,7 @@ const QuestionOpctions = ({ opction, correctAnswer }) => {
   const [isCurrect, setIsCurrect] = React.useState(false);
   const [isWrong, setIsWrong] = React.useState(false);
 
+
   const selectCurrectAnsHendler = () => {
     if (opction === correctAnswer) {
       isCurrect ? setIsCurrect(false) : setIsCurrect(true);
